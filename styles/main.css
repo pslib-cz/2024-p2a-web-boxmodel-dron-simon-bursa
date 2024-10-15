@@ -10,6 +10,13 @@
         --black: #000000;
         --light: #FFFFFF;
         --gray: #3B3E40;
+
+        --h1-font-size: 72px;
+        --h2-font-size: 36px;
+        --h3-font-size: 20px;
+        --p-font-size: 16px;
+
+        --figcaption-font-size: 14px;
     }
     html {
         font-family: "Open Sans", sans-serif;
@@ -37,23 +44,100 @@
 
 /* VRSTVA PRO VAŠE STYLY */
 @layer design {
-   a {
-    text-decoration: none;
-    color: var(--text);
+    h1 {
+        font-size: var(--h1-font-size);
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: var(--h2-font-size);
+    }
+
+    h3 {
+        font-size: var(--h3-font-size);
+    }
+
+    p {
+        font-size: var(--p-font-size);
+    }
+
+    main {
+        max-width: 60%;
+        margin: 0 auto;
+    
+    }
+
+    span {
+        font-size: 2em;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    figcaption {
+        font-size: var(--figcaption-font-size);
+        color: var(--gray);
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+   .button {
+    display: inline-block;
+    color: var(--light);
     background-color: var(--primary);
+    text-decoration: none;
     border: none;
     padding: 12px 15px;
-    border-radius: 50px;
-    color: var(--light);
     border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
    }
 
-   span {
-    font-size: 2em;
+   .button:hover {
+    background-color: var(--black);
+    color: var(--light);
+   }
+
+   
+
+   .page__logo {
+    display: inline-block;
+    left: 0;
+   }
+
+   .page__header {
+    background-image: url("../images/header-2560w.webp");
+    color: var(--light, rgb(255,255,255));
+    background-size: cover;
+    height: 80vh;
+    background-position: bottom top;
+    margin: 0 auto;
+   }
+
+   .page__header a {
+    background-color: var(--light);
+    color: var(--black);
+   }
+
+   .page__intro {
+    display: inline-block;
+    padding-top: 20rem;
+    padding-left: 100px;
+    max-width: 50%;
+   }
+
+   .page__intro img {
+    position: absolute; 
+    top: 0px;
+    z-index: -1;
+    overflow: hidden;
    }
 
    .page__content__border {
-    border: 2px solid var(--primary);
+    border: 3px solid var(--primary);
+    padding: 10px 20px;
    }
 
    .page__content__max {
@@ -61,19 +145,28 @@
     text-align: center;
     color: var(--light);
     padding: 30px;
+    overflow: visible;
    }
+
 
    .page__content__max p {
     margin-bottom: 50px;
    }
 
+
    .page__content__max h2 {
     font-size: 4em;
    }
 
+
    .page__content__max a {
     background-color: var(--light);
     color: var(--black);
+   }
+
+   .page__content picture {
+    width: 100%;
+    height: auto;
    }
 
    .page__footer {
@@ -81,5 +174,59 @@
     color: var(--light);
     padding: 5px;
     text-align: center;
+   }
+
+   
+   figure picture img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    
+   }
+
+   .page__content__provedeni {
+    display: inline-block;
+   }
+
+   .page__content__provedeni__div {
+    width: 30%;
+    padding: 1%;
+    min-width: 300px;
+    vertical-align: top;
+    display: inline-block;
+   }
+
+   .page__content__provedeni__div img {
+    width: 100%;   
+    height: auto;
+   }
+
+   .page__content__gallery__gallery {
+    font-size: 0;
+   }
+
+   .card_full {
+    width: 100%;
+    height: auto;
+   }
+
+   .card_half_left {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    display: inline-block;
+    width: calc(50% - 10px - 1em);
+    object-fit: cover;
+    vertical-align: top;
+   }
+
+   .card_half_right {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 10px;
+    display: inline-block;
+    width: calc(50% - 10px - 1em);
+    object-fit: cover;
+    vertical-align: top;
    }
 }
