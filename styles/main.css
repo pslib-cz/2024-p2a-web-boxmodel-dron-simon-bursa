@@ -100,7 +100,9 @@
     color: var(--light);
    }
 
-   
+   .page__content {
+    width: 50%;
+   }
 
    .page__logo {
     display: inline-block;
@@ -126,6 +128,7 @@
     padding-top: 20rem;
     padding-left: 100px;
     max-width: 50%;
+    min-width: 420px;
    }
 
    .page__intro img {
@@ -169,11 +172,23 @@
     height: auto;
    }
 
+   .first {
+    margin-top: 100px;
+   }
+
    .page__footer {
     background-color: var(--black);
     color: var(--light);
     padding: 5px;
     text-align: center;
+   }
+
+   .page_logo {
+    padding: 50px;
+    text-align: center;
+    display: inline;
+    background-image: url("../images/logo.svg");
+    
    }
 
    
