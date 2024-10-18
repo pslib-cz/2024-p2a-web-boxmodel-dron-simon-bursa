@@ -102,6 +102,7 @@
 
    .page__content {
     width: 50%;
+    min-width: 300px;
    }
 
    .page__logo {
@@ -109,12 +110,24 @@
     left: 0;
    }
 
+   .page__logo_div {
+    display: block;
+    text-align: center;
+     height: min(10vw, 20px);
+     height: 20px;
+     padding-top: 20px;
+
+    }
+
+    .page__logo_div a {
+        background-image: url("../images/logo.svg");
+    }
+
    .page__header {
     background-image: url("../images/header-2560w.webp");
     color: var(--light, rgb(255,255,255));
     background-size: cover;
-    height: 80vh;
-    background-position: bottom top;
+    height: min(100vh, 800px);
     margin: 0 auto;
    }
 
@@ -124,11 +137,15 @@
    }
 
    .page__intro {
-    display: inline-block;
-    padding-top: 20rem;
-    padding-left: 100px;
-    max-width: 50%;
-    min-width: 420px;
+    height: min(20vw, 300px);
+   }
+
+   .nevim {
+    padding-top: 15vw;
+    padding-left: 8vw;
+    margin-bottom: min(2em, 5vw);
+    max-height: 100vw;
+    max-width: 700px;
    }
 
    .page__intro img {
@@ -159,6 +176,7 @@
 
    .page__content__max h2 {
     font-size: 4em;
+    text-align: center;
    }
 
 
@@ -174,7 +192,7 @@
 
    .first {
     margin-top: 100px;
-   }
+   } 
 
    .page__footer {
     background-color: var(--black);
@@ -188,7 +206,6 @@
     text-align: center;
     display: inline;
     background-image: url("../images/logo.svg");
-    
    }
 
    
@@ -222,26 +239,66 @@
 
    .card_full {
     width: 100%;
+   }
+
+   .card { 
+    border : 2px solid #000; 
+    overflow:hidden;
+   }
+
+
+   .page__content__provedeni2 {
+    display: inline-block;
+    text-align: center;
+   }
+
+   .page__content__provedeni__div2 {
+    padding-top: 10px;
+    width: 49%;
+    padding-right: 1%;
+    min-width: 300px;
+    vertical-align: top;
+    display: inline-block;
+    aspect-ratio: 16/9;
+   }
+
+   .page__content__provedeni__div3 {
+    padding-top: 10px;
+    width: 49%;
+    padding-left: 1%;
+    min-width: 300px;
+    vertical-align: top;
+    display: inline-block;
+    aspect-ratio: 16/9;
+   }
+
+   .page__content__provedeni__div2 img {
+    width: 100%;   
     height: auto;
    }
 
-   .card_half_left {
-    margin-top: 20px;
-    margin-bottom: 100px;
-    margin-right: 10px;
-    display: inline-block;
-    width: calc(50% - 10px - 1em);
-    object-fit: cover;
-    vertical-align: top;
+   .page__content__provedeni__div3 img {
+    width: 100%;   
+    height: auto;
    }
 
-   .card_half_right {
-    margin-top: 20px;
-    margin-bottom: 100px;
-    margin-left: 10px;
-    display: inline-block;
-    width: calc(50% - 10px - 1em);
-    object-fit: cover;
-    vertical-align: top;
+   @media only screen and (max-width: 1340px) {
+    .page__content__provedeni__div2 {
+        width: 100%;
+        aspect-ratio: 16/9;
+        padding: 0%;
+        padding-top: 10px;
+    }
+    .page__content__provedeni__div3 {
+        width: 100%;
+        aspect-ratio: 16/9;
+        padding: 0%;
+        padding-top: 10px;
+    }
    }
-}
+  
+  }
+
+
+  
+
